@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; }
+  .main form {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    display: flex;
+    height: 54px; }
+    .main form input {
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 25px;
+      height: 100%;
+      padding: 0;
+      width: 120px; }
+      .main form input:focus {
+        outline: 0; }
+    .main form button {
+      background-color: green;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      height: 100%;
+      width: 55px; }
+      .main form button:focus {
+        outline: 0; }
+      .main form button:hover {
+        cursor: pointer; }
+
+/*# sourceMappingURL=searchbar.css.map */
