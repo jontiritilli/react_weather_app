@@ -1,0 +1,22 @@
+.navMain {
+  width: 100vw;
+  height: 64px;
+  display: flex; }
+  .navMain img {
+    height: 64px; }
+  .navMain .navTitle {
+    font-size: 30px;
+    margin: auto 0 auto 5px; }
+  .navMain .navMenuContainer {
+    cursor: pointer;
+    margin: auto 5px auto auto; }
+    .navMain .navMenuContainer .burger {
+      display: flex;
+      flex-direction: column; }
+      .navMain .navMenuContainer .burger span {
+        height: 5px;
+        width: 30px;
+        margin: 3px 0;
+        background-color: #3d3d3d; }
+
+/*# sourceMappingURL=index.css.map */
