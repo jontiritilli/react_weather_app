@@ -1,18 +1,33 @@
 .dayContainer
+  align-items: center
+  display: flex
+  flex-direction: column
+  margin: 0 5px
   width: calc(100%/5)
-.dayImg
+@media (max-width: 600px)
+  .dayContainer
+    width: 100%
+    margin: 0
+.rowContainer
   width: 100%
-.imgContainer
-  display: block
-  position: relative
-.tempNow
+.dayItem
   display: flex
   justify-content: center
-.tempHigh
-  display: inline-flex
+  width: calc(100%/3)
+.dayName
+  display: flex
   justify-content: center
-  width: 50%
-.tempLow
-  display: inline-flex
+.dayDiv
+  display: flex
+  height: 16%
   justify-content: center
-  width: 50%
+  width: 100%
+.dayRow
+  align-items: center
+  display: flex
+  justify-content: center
+  width: 100%
+.divider
+  width: 100%
+  height: 2px
+  background-color: black

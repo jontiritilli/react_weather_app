@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import '../assets/css/navbar.css';
-import logo from '../assets/images/weather.png'
+import logo from '../assets/images/weather.png';
+import SearchBar from './searchbar';
 
 class Navbar extends Component {
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
   render(){
     return (
       <nav>
@@ -13,11 +18,7 @@ class Navbar extends Component {
             <div className="navMenu">
 
             </div>
-            <div className="burger">
-              <span className='top'></span>
-              <span className='middle'></span>
-              <span className='bottom'></span>
-            </div>
+            <SearchBar callback={this.props.callback}/>
           </div>
         </div>
       </nav>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/css/weatherbar.css';
-import Day from './day';
-import weather from '../api/weather';
+import DayMaker from './dayMaker';
 
 class WeatherBar extends Component {
   constructor(props){
@@ -10,13 +9,7 @@ class WeatherBar extends Component {
   }
   render(){
     return (
-      <div className='weatherContainer'>
-        <Day/>
-        <Day/>
-        <Day/>
-        <Day/>
-        <Day/>
-      </div>
+      <DayMaker list={this.props.weather}/>
     )
   }
 }
