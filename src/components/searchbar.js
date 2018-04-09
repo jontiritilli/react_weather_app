@@ -17,7 +17,7 @@ class SearchBar extends Component {
   }
   handleSubmit(event){
     event.preventDefault();
-    console.log(this.state.value);
+    this.props.callback(this.state.value)
   }
   validateZip(value){
     if(value.length<=5){
