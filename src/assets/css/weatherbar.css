@@ -1,7 +1,21 @@
 .weatherContainer {
-  background-color: yellow;
+  background-color: rgba(18, 100, 200, 0.8);
+  color: white;
   display: flex;
   margin-top: 30px;
   width: 100%; }
+
+@media (max-width: 600px) {
+  .weatherContainer {
+    background-color: rgba(18, 100, 200, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%; } }
+.alt-text {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=weatherbar.css.map */
