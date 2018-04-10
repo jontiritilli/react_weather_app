@@ -1,29 +1,42 @@
 .dayContainer {
   align-items: center;
+  border: 1px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  margin: 0 5px;
-  width: calc(100%/5); }
+  margin: 0 auto;
+  width: calc(100%/7); }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
   .dayContainer {
-    width: 100%;
+    width: calc(100%/3);
+    margin: 0; } }
+@media (max-width: 330px) {
+  .dayContainer {
+    width: calc(100%/2);
     margin: 0; } }
 .rowContainer {
   width: 100%; }
 
+.day {
+  font-size: 4vmin;
+  text-align: center;
+  width: 100%; }
+
 .dayItem {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   width: calc(100%/3); }
 
 .dayName {
   display: flex;
   justify-content: center; }
 
+@media (max-width: 992px) {
+  .dayDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%; } }
 .dayDiv {
   display: flex;
-  height: 16%;
   justify-content: center;
   width: 100%; }
 
@@ -34,8 +47,9 @@
   width: 100%; }
 
 .divider {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 2px;
-  background-color: black; }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 /*# sourceMappingURL=day.css.map */

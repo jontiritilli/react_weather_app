@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      weather: {}
+      weather: {},
+      message: 'Please Enter Your Zip Code'
     };
 
     this.getWeather = this.getWeather.bind(this);
@@ -24,6 +25,15 @@ class App extends Component {
   }
   saveWeather(data){
     let results = JSON.parse(data.target.responseText);
+    if(results.cod === '404'){
+      results.message = results.message.toLowerCase()
+      .split(' ')
+      .map(function(word) {
+        return word[0].toUpperCase() + word.substr(1)
+      }).join(' ')
+      this.setState({weather: {}, message: `${results.message}, Please Try Another Zip`})
+      return
+     }
     this.setState({weather: results})
   }
   render(){
@@ -31,7 +41,7 @@ class App extends Component {
       <div>
           <div className="app">
             <Navbar callback={this.getWeather}/>
-            <Body weather={this.state.weather}/>
+            <Body weather={this.state.weather} message={this.state.message}/>
           </div>
       </div>
     );

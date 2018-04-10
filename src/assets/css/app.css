@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
 html {
   overflow-x: hidden; }
 
@@ -6,8 +7,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Poiret One";
   margin: 0;
   width: 100vw; }
+
+nav {
+  position: sticky;
+  top: 0; }
 
 ::-webkit-scrollbar {
   display: none; }

@@ -28,7 +28,7 @@ class SearchBar extends Component {
     return(
       <div className='main'>
         <form>
-          <input placeholder='enter zip' name='zipcode' value={this.state.value} onChange={this.handleChange} />
+          <input placeholder='enter zip' name='zipcode' autoComplete='off' value={this.state.value} onChange={this.handleChange} />
           <button onClick={this.handleSubmit}>Go</button>
         </form>
       </div>

@@ -1,21 +1,24 @@
 .weatherContainer {
-  background-color: rgba(18, 100, 200, 0.8);
+  background-color: rgba(43, 78, 108, 0.8);
+  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
   width: 100%; }
 
-@media (max-width: 600px) {
-  .weatherContainer {
-    background-color: rgba(18, 100, 200, 0.8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    width: 100%; } }
+.currentCity {
+  font-size: 5vmin;
+  color: white; }
+
 .alt-text {
   width: 100%;
   display: flex;
   justify-content: center; }
+
+.message {
+  font-size: 8vmin; }
 
 /*# sourceMappingURL=weatherbar.css.map */
