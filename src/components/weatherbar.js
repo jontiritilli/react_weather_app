@@ -9,7 +9,10 @@ class WeatherBar extends Component {
   }
   render(){
     return (
-      <DayMaker list={this.props.weather}/>
+      <div>
+        <div className="currentCity">Current City: {this.props.city ? this.props.city : `City Name Unavailable`}</div>
+        <DayMaker list={this.props.weather}/>
+      </div>
     )
   }
 }

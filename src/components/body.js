@@ -14,7 +14,7 @@ class Body extends Component {
   render(){
     return (
       this.props.weather.list ?
-      <WeatherBar weather={this.props.weather.list}/> :
+      <WeatherBar weather={this.props.weather.list} city={this.props.weather.city.name}/> :
       <div className='weatherContainer'>
         <div className='alt-text'>
           <p className='message'>{this.props.message}</p>

@@ -11,6 +11,10 @@ body {
   margin: 0;
   width: 100vw; }
 
+nav {
+  position: sticky;
+  top: 0; }
+
 ::-webkit-scrollbar {
   display: none; }
 

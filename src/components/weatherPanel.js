@@ -15,7 +15,10 @@ class weatherPanel extends Component {
     return str.replace(/ /g, '_').toLowerCase()
   }
   toShortDay(str){
-    return str.substr(0,3)
+    str = str.split(' ')
+    str[0] = str[0].substr(0,3) + ',';
+    str[1] = str[1].substr(0,3) + '.';
+    return str.join(' ')
   }
   render(){
     const rows = this.props.weatherRows.map( (row) => {

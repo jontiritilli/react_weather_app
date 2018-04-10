@@ -18,13 +18,12 @@
   width: 100%; }
 
 .day {
-  font-size: 3.5vmin;
+  font-size: 4vmin;
   text-align: center;
   width: 100%; }
 
 .dayItem {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   width: calc(100%/3); }
 
 .dayName {
@@ -48,7 +47,8 @@
   width: 100%; }
 
 .divider {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.4); }
 
