@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import moment from 'moment';
 import pic from '../assets/images/weather.png'
 import '../assets/css/day.css';
 
-class weatherPanel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
-  }
+class WeatherPanel extends Component {
   convertKmphToMph(kmph) {
     return kmph * 0.621371
   }
@@ -15,10 +11,10 @@ class weatherPanel extends Component {
     return str.replace(/ /g, '_').toLowerCase()
   }
   toShortDay(str){
-    str = str.split(' ')
-    str[0] = str[0].substr(0,3) + ',';
-    str[1] = str[1].substr(0,3) + '.';
-    return str.join(' ')
+    str = str.split(' ');
+    str[0] = str[0].substr(0,3);
+    str[1] = str[1].substr(0,3);
+    return str.join(' ');
   }
   render(){
     const rows = this.props.weatherRows.map( (row) => {
@@ -56,4 +52,4 @@ class weatherPanel extends Component {
   }
 }
 
-export default weatherPanel
+export default WeatherPanel

@@ -10,7 +10,8 @@
   width: 100%; }
 
 .currentCity {
-  font-size: 5vmin;
+  font-size: 35px;
+  margin-left: 10px;
   color: white; }
 
 .alt-text {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/css/app.css';
+import background from '../assets/images/background.jpg';
 import Navbar from "./navbar";
 import Body from './body';
 import keys from '../api/config';
@@ -39,10 +40,13 @@ class App extends Component {
   render(){
     return (
       <div>
-          <div className="app">
-            <Navbar callback={this.getWeather}/>
-            <Body weather={this.state.weather} message={this.state.message}/>
-          </div>
+        <div className="app">
+          <Navbar callback={this.getWeather}/>
+          <Body weather={this.state.weather} message={this.state.message}/>
+        </div>
+        <div className="backgroundImg">
+          <img src={background} alt=""/>
+        </div>
       </div>
     );
   }

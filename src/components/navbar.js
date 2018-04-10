@@ -4,10 +4,6 @@ import logo from '../assets/images/weather.png';
 import SearchBar from './searchbar';
 
 class Navbar extends Component {
-  constructor(props){
-    super(props);
-    this.state = {}
-  }
   render(){
     return (
       <nav>

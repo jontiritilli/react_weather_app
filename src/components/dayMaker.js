@@ -4,10 +4,6 @@ import moment from 'moment';
 import stockImg from '../assets/images/weather.png';
 
 class DayMaker extends Component {
-  constructor(props){
-    super(props);
-    this.state = {}
-  }
   groupWeatherByDay() {
     const days = new Map()
     this.props.list.forEach( (w) => {
