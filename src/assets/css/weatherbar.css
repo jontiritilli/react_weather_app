@@ -1,3 +1,51 @@
+.alt-text {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.avgTemp {
+  font-size: 3vmin; }
+
+@media (max-width: 600px) {
+  .avgTemp {
+    font-size: 4.5vmin; } }
+.currentCity {
+  font-size: 35px;
+  margin-left: 10px;
+  color: white; }
+
+.graph {
+  background-color: white;
+  margin: auto;
+  width: 58%; }
+
+@media (max-width: 600px) {
+  .graph {
+    background-color: white;
+    margin: auto;
+    width: 100%; } }
+.graphHidden {
+  display: none; }
+
+.graphBtn {
+  background-color: rgba(43, 78, 108, 0.8);
+  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 20px;
+  height: 100%; }
+  .graphBtn:hover {
+    cursor: pointer; }
+
+.message {
+  font-size: 8vmin; }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
 .weatherContainer {
   background-color: rgba(43, 78, 108, 0.8);
   box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.7);
@@ -9,17 +57,7 @@
   margin-top: 5px;
   width: 100%; }
 
-.currentCity {
-  font-size: 35px;
-  margin-left: 10px;
-  color: white; }
-
-.alt-text {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-
-.message {
-  font-size: 8vmin; }
+.weatherHidden {
+  display: none; }
 
 /*# sourceMappingURL=weatherbar.css.map */
