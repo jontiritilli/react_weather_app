@@ -20,8 +20,9 @@ class DayMaker extends Component {
     const weatherPanels = Object.keys(weatherRows).map( (day, index) => (
       <WeatherPanel key={day} today={index===0} day={day} city={city} weatherRows={weatherRows[day]}/>
     ));
+    console.log(this.props)
     return (
-      <div className='weatherContainer'>
+      <div className={this.props.graph ? 'weatherHidden' : 'weatherContainer'}>
         {weatherPanels}
       </div>
     )
