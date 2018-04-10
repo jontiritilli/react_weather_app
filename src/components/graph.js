@@ -12,9 +12,9 @@ class Graph extends Component {
   render(){
     const data = this.createData(this.props.data);
     const avg = this.dataAvg(data);
-    console.log(this.props)
     return (
       <div className={this.props.graph ? 'graph' : 'graphHidden'}>
+        <div>Temperature Trend</div>
         <Sparklines height={120} width={180} data={data}>
             <SparklinesLine color={'red'} />
             <SparklinesReferenceLine type="avg" />
