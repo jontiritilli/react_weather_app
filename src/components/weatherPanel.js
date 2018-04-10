@@ -19,7 +19,7 @@ class WeatherPanel extends Component {
   render(){
     const rows = this.props.weatherRows.map( (row) => {
       const time = `${moment(row.dt*1000).format('LT')}`;
-      const icon = `http://openweathermap.org/img/w/${row.weather[0].icon}.png`;
+      const icon = `https://openweathermap.org/img/w/${row.weather[0].icon}.png`;
       const iconName = row.weather[0].description;
       const temp = `${Math.round(row.main.temp)}°F`;
       const arrowStyling = {transform: `rotate(${Math.round(row.wind.deg)}deg)`};
