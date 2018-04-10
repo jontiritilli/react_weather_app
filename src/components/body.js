@@ -7,14 +7,19 @@ class Body extends Component {
   constructor(props){
     super(props);
     this.state = {
-      weather: {}
+      weather: {},
+      message: ''
     }
   }
   render(){
     return (
-        <div>
-          <WeatherBar weather={this.props.weather.list}/>
+      this.props.weather.list ?
+      <WeatherBar weather={this.props.weather.list}/> :
+      <div className='weatherContainer'>
+        <div className='alt-text'>
+          <p className='message'>{this.props.message}</p>
         </div>
+      </div>
     )
   }
 }

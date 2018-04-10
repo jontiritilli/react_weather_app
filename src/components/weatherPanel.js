@@ -14,6 +14,9 @@ class weatherPanel extends Component {
   toSnakeCase(str) {
     return str.replace(/ /g, '_').toLowerCase()
   }
+  toShortDay(str){
+    return str.substr(0,3)
+  }
   render(){
     const rows = this.props.weatherRows.map( (row) => {
       const time = `${moment(row.dt*1000).format('LT')}`;
@@ -38,10 +41,10 @@ class weatherPanel extends Component {
       <div id={this.toSnakeCase(this.props.day)} className='dayContainer'>
         {this.props.today ?
           <div className='dayDiv'>
-            <h3 className='day'>Today</h3>
+            <p className='day'>Today</p>
           </div> :
           <div className='dayDiv'>
-            <h3 className='day'>{this.props.day}</h3>
+            <p className='day'>{this.toShortDay(this.props.day)}</p>
           </div>
           }
         {rows}

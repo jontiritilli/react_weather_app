@@ -19,26 +19,16 @@ class DayMaker extends Component {
   }
   render(){
     const weather = this.props.list;
-    if(weather){
-      const city = weather.city && weather.city.name
-      const weatherRows = this.groupWeatherByDay( weather || [] )
-      const weatherPanels = Object.keys(weatherRows).map( (day, index) => (
-        <WeatherPanel key={day} today={index===0} day={day} city={city} weatherRows={weatherRows[day]}/>
-      ));
-      return (
-        <div className='weatherContainer'>
-          {weatherPanels}
-        </div>
-      )
-    } else {
-        return (
-          <div className='weatherContainer'>
-            <div className="alt-text">
-              <h1>Please Enter Zip Code to Get Started</h1>
-            </div>
-          </div>
-        )
-    }
+    const city = weather.city && weather.city.name
+    const weatherRows = this.groupWeatherByDay( weather || [] )
+    const weatherPanels = Object.keys(weatherRows).map( (day, index) => (
+      <WeatherPanel key={day} today={index===0} day={day} city={city} weatherRows={weatherRows[day]}/>
+    ));
+    return (
+      <div className='weatherContainer'>
+        {weatherPanels}
+      </div>
+    )
   }
 }
 
