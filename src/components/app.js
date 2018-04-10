@@ -17,7 +17,7 @@ class App extends Component {
     this.saveWeather = this.saveWeather.bind(this);
   }
   getWeather(zip) {
-    const requestString = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zip
+    const requestString = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zip
                         + "&cluster=yes&format=json&units=imperial" + "&APPID=" + keys.weatherApiKey;
     const req = new XMLHttpRequest();
     req.onload = this.saveWeather;
