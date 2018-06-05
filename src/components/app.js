@@ -12,10 +12,10 @@ class App extends Component {
       weather: {},
       message: 'Please Enter Your Zip Code'
     };
-
     this.getWeather = this.getWeather.bind(this);
     this.saveWeather = this.saveWeather.bind(this);
   }
+
   getWeather(zip) {
     const requestString = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zip
                         + "&cluster=yes&format=json&units=imperial" + "&APPID=" + keys.weatherApiKey;
@@ -28,10 +28,9 @@ class App extends Component {
     let results = JSON.parse(data.target.responseText);
     if(results.cod === '404'){
       results.message = results.message.toLowerCase()
-      .split(' ')
-      .map(function(word) {
-        return word[0].toUpperCase() + word.substr(1)
-      }).join(' ')
+        .split(' ')
+        .map(word => word[0].toUpperCase() + word.substr(1))
+        .join(' ');
       this.setState({weather: {}, message: `${results.message}, Please Try Another Zip`})
       return
      }

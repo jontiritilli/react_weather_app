@@ -5,11 +5,13 @@ import stockImg from '../assets/images/weather.png';
 
 class DayMaker extends Component {
   groupWeatherByDay() {
-    const days = new Map()
+    const days = new Map();
     this.props.list.forEach( (w) => {
       const day = moment(w.dt*1000).format("dddd, MMMM Do")
-      if( !days[day] ) days[day] = []
-      days[day].push(w)
+      if( !days[day] ){
+        days[day] = [];
+      }
+      days[day].push(w);
     })
     return days;
   }
