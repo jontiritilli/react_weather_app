@@ -4,38 +4,32 @@ import pic from '../assets/images/weather.png'
 import '../assets/css/day.css';
 
 class WeatherPanel extends Component {
-  convertKmphToMph(kmph) {
-    return kmph * 0.621371
-  }
   toSnakeCase(str) {
     return str.replace(/ /g, '_').toLowerCase()
   }
   toShortDay(str){
-    str = str.split(' ');
-    str[0] = str[0].substr(0,3);
-    str[1] = str[1].substr(0,3);
-    return str.join(' ');
+    return [...str].splice(0,3).join('');
   }
-  render(){
-    const rows = this.props.weatherRows.map( (row) => {
+  makeRows(data){
+    let rows = data.map(row => {
       const time = `${moment(row.dt*1000).format('LT')}`;
       const icon = `https://openweathermap.org/img/w/${row.weather[0].icon}.png`;
       const iconName = row.weather[0].description;
       const temp = `${Math.round(row.main.temp)}°F`;
-      const arrowStyling = {transform: `rotate(${Math.round(row.wind.deg)}deg)`};
-      const windSpeed = `${Math.round(this.convertKmphToMph(row.wind.speed))} mph`;
-      const windDirection = `${Math.round(row.wind.deg)}°`;
-      return(
-      <div key={time} className='rowContainer'>
-        <div className='dayRow'>
-          <time className='dayItem'>{time}</time>
-          <div className='dayItem'><img src={icon} alt={iconName} title={iconName}/></div>
-          <div className='dayItem'>{temp}</div>
+      return (
+        <div key={time} className='rowContainer'>
+          <div className='dayRow'>
+            <time className='dayItem'>{time}</time>
+            <div className='dayItem'><img src={icon} alt={iconName} title={iconName}/></div>
+            <div className='dayItem'>{temp}</div>
+          </div>
+          <div className="divider"></div>
         </div>
-        <div className="divider"></div>
-      </div>
       )
     })
+    return rows;
+  }
+  render(){
     return (
       <div id={this.toSnakeCase(this.props.day)} className='dayContainer'>
         {this.props.today ?
@@ -46,7 +40,7 @@ class WeatherPanel extends Component {
             <p className='day'>{this.toShortDay(this.props.day)}</p>
           </div>
           }
-        {rows}
+        {this.makeRows(this.props.weatherRows)}
       </div>
     )
   }

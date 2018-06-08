@@ -7,15 +7,16 @@ class WeatherBar extends Component {
   constructor(props){
     super(props);
     this.state = {
-      graphShown: false
-    }
-    this.showGraph = this.showGraph.bind(this)
+      isShown: false
+    };
+    this.showGraph = this.showGraph.bind(this);
   }
   showGraph(){
-    this.state.graphShown ?
-      this.setState({graphShown: false})
-    :
-    this.setState({graphShown: true})
+    if(this.state.isShown){
+      this.setState({isShown: false})
+    } else {
+      this.setState({isShown: true})
+    }
   }
   render(){
     return (
@@ -28,8 +29,8 @@ class WeatherBar extends Component {
             <button className="graphBtn" onClick={this.showGraph}>Graph</button>
           </div>
         </div>
-        <DayMaker list={this.props.weather} graph={this.state.graphShown}/>
-        <Graph data={this.props.weather} graph={this.state.graphShown}/>
+        <DayMaker list={this.props.weather} graph={this.state.isShown}/>
+        <Graph data={this.props.weather} graph={this.state.isShown}/>
       </div>
     )
   }
